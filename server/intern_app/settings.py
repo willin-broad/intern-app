@@ -59,7 +59,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",  # Django Backend URL
 ]
 
-ROOT_URLCONF = 'backend.urls'
+ROOT_URLCONF = 'intern_app.urls'
 
 TEMPLATES = [
     {
@@ -77,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'backend.wsgi.application'
+WSGI_APPLICATION = 'intern_app.wsgi.application'
 
 
 # Database 
