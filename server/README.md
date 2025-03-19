@@ -1,87 +1,86 @@
-# intern-app
-an automated internship system that can address applications online
-🚀 Django Backend - Intern App
-📌 Setup Instructions
-1️⃣ Clone the Repository
-sh
-Copy
-Edit
+c# Intern Application Backend
+
+This is the **Django** backend for the Intern Application. Follow the instructions below to set up and run the backend server locally.
+
+## Prerequisites
+Make sure you have the following installed:
+- **Python** (>= 3.8)
+- **pip** (Python package manager)
+- **virtualenv** (for creating a virtual environment)
+- **Git** (for version control)
+
+---
+
+## Backend Setup
+
+### **1. Clone the Repository**
+```sh
 git clone https://github.com/willin-broad/intern-app.git
 cd intern-app
-2️⃣ Create and Activate Virtual Environment
-sh
-Copy
-Edit
-# Create a virtual environment
-python -m venv venv
+```
 
-# Activate the virtual environment (Windows)
-venv\Scripts\activate
+### **2. Create and Activate Virtual Environment**
+```sh
+python -m venv venv  # Create virtual environment
+source venv/bin/activate  # Mac/Linux
+venv\Scripts\activate  # Windows
+```
 
-# Activate the virtual environment (Mac/Linux)
-source venv/bin/activate
-3️⃣ Install Dependencies
-sh
-Copy
-Edit
+### **3. Install Dependencies**
+```sh
 pip install -r requirements.txt
-4️⃣ Apply Migrations
-sh
-Copy
-Edit
+```
+
+### **4. Configure Environment Variables**
+Create a `.env` file in the root directory and add necessary environment variables:
+```ini
+DEBUG=True
+SECRET_KEY=your_secret_key
+DATABASE_URL=your_database_url
+```
+
+### **5. Apply Migrations**
+```sh
 python manage.py migrate
-5️⃣ Create a Superuser (Optional for Admin Panel)
-sh
-Copy
-Edit
+```
+
+### **6. Create a Superuser (Optional, for Admin Panel Access)**
+```sh
 python manage.py createsuperuser
-Follow the prompts to create a superuser account.
+```
+Follow the prompts to create an admin user.
 
-6️⃣ Run the Server
-sh
-Copy
-Edit
+### **7. Run the Django Development Server**
+```sh
 python manage.py runserver
-Your backend should now be running at http://127.0.0.1:8000/
+```
+By default, the server runs at **http://127.0.0.1:8000/**
 
-🔗 API Endpoints
-Method	Endpoint	Description
-GET	/api/interns/	Get all interns
-POST	/api/interns/	Create a new intern
-GET	/api/interns/<id>/	Get a single intern
-PUT	/api/interns/<id>/	Update an intern
-DELETE	/api/interns/<id>/	Delete an intern
-🛠 Common Issues & Fixes
-🔹 CORS Policy Issue
-If you get a CORS error when connecting to React, install django-cors-headers:
+---
 
-sh
-Copy
-Edit
-pip install django-cors-headers
-Then, add this to settings.py:
+## API Testing (Optional)
+If you want to test API endpoints, install **Postman** or use **cURL**.
 
-python
-Copy
-Edit
-INSTALLED_APPS = [
-    "corsheaders",
-    ...
-]
+Example:
+```sh
+curl http://127.0.0.1:8000/api/example/
+```
 
-MIDDLEWARE = [
-    "corsheaders.middleware.CorsMiddleware",
-    ...
-]
+---
 
-CORS_ALLOW_ALL_ORIGINS = True  # Allow frontend requests
-Restart the server:
+## Running the Project in Production
+For production, consider using:
+- **Gunicorn** or **uWSGI** for Django
+- **Nginx** or **Apache** for serving static files
+- **Docker** for containerization
 
-sh
-Copy
-Edit
-python manage.py runserver
-🎯 Next Steps
-Connect to React frontend (http://localhost:5173/)
-Deploy using Docker or a cloud service
-🚀 Happy Coding!
+---
+
+## Contributing
+Feel free to fork the repo, create a new branch, and submit a PR.
+
+---
+
+## License
+This project is licensed under the **MIT License**.
+
