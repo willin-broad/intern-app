@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
+    'rest_framework',#for rest api
     'corsheaders', #allow coomunication with frontend
-    'internships',
+    'internships',#app for internship
 ]
 
 MIDDLEWARE = [
@@ -54,9 +54,9 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # React Frontend URL (default)
-    "http://localhist:5173",  #vite (react) frontend URL
-    # "http://localhost:8000",  # Django Backend URL
+    # "http://localhost:3000",  # React Frontend URL (default)
+    "http://localhost:5173",  #vite (react) frontend URL
+    "http://localhost:8000",  # Django Backend URL
 ]
 
 ROOT_URLCONF = 'intern_app.urls'
@@ -80,13 +80,23 @@ TEMPLATES = [
 WSGI_APPLICATION = 'intern_app.wsgi.application'
 
 
-# Database
+# Database 
+
+
+# PS: change the database settings to your database settings
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql', #database engine
+        'NAME':'INTERN_DB',                  #database name
+        'USER': 'root',                   #username for mysql
+        'PASSWORD': 'willin',               #password for mysql
+        'HOST': '127.0.0.1',                #default host for mysql
+        'PORT': '3306',                      #default port for mysql
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"   #set sql mode to strict
+         }
     }
 }
 

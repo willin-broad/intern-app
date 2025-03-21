@@ -8,6 +8,8 @@ router.register(r'departments', DepartmentViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    # path('api/interns/', create_intern),
+    # path('api/interns/<str:unique_code>/', get_intern),
 ]
 
 
