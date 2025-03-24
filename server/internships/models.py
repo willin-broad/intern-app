@@ -31,7 +31,7 @@ class Intern(models.Model):
     sub_county = models.CharField(max_length=50, blank=True, null=True)
     ward = models.CharField(max_length=50, blank=True, null=True)
     location = models.CharField(max_length=255, blank=True, null=True)
-    date_registered = models.DateTimeField(auto_now_add=True)#date registered
+    # date_registered = models.DateTimeField(auto_now_add=True)#date registered
     application_status = models.CharField(max_length=20, default="Pending")#application status
 
     # Auto-generate unique application ID
