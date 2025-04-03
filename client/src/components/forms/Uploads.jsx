@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import FormContainer from '../FormContainer';
 
-export default function Uploads({ onNext, onBack, initialData }) {
+export default function Uploads({ onSubmit, onBack }) {
   const [formData, setFormData] = useState({
     department: "",
     subDepartment: "",
@@ -27,7 +27,7 @@ export default function Uploads({ onNext, onBack, initialData }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onNext(formData);
+    onSubmit(formData);
   };
 
   // Sample departments - replace with your actual data
@@ -147,7 +147,7 @@ export default function Uploads({ onNext, onBack, initialData }) {
                   </label>
                   <p className="pl-1">or drag and drop</p>
                 </div>
-                <p className="text-xs text-gray-500">Max size: 5GB</p>
+                <p className="text-xs text-gray-500">Max size: 10MB</p>
               </div>
             </div>
             {formData.passportPhoto && (
@@ -245,7 +245,7 @@ export default function Uploads({ onNext, onBack, initialData }) {
                   </label>
                   <p className="pl-1">or drag and drop</p>
                 </div>
-                <p className="text-xs text-gray-500">Max size: 5GB</p>
+                <p className="text-xs text-gray-500">Max size: 10MB</p>
               </div>
             </div>
             {formData.cv && (
@@ -294,7 +294,7 @@ export default function Uploads({ onNext, onBack, initialData }) {
                   </label>
                   <p className="pl-1">or drag and drop</p>
                 </div>
-                <p className="text-xs text-gray-500">Max size: 100mb</p>
+                <p className="text-xs text-gray-500">Max size: 10MB</p>
               </div>
             </div>
             {formData.recommendationLetter && (
