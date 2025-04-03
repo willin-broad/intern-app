@@ -39,10 +39,9 @@ export default function ApplicationForm() {
       });
 
       // API call to your backend
-      const response = await fetch('https://your-api-endpoint.com/submit', {
+      const response = await fetch('http://localhost:8000/api/interns/', {
         method: 'POST',
         body: finalData,
-        // headers are automatically set by browser for FormData
       });
 
       if (!response.ok) throw new Error('Submission failed');
@@ -67,9 +66,9 @@ export default function ApplicationForm() {
 
   return (
     <div className="container mx-auto p-4">
-      {/* Progress Indicator (optional) */}
+      {/* Progress Indicator */}
       <div className="mb-8">
-        <div className="flex justify-between">
+        <div className="flex justify-evenly">
           {[1, 2, 3, 4].map((stepNumber) => (
             <div key={stepNumber} className="flex flex-col items-center">
               <div
