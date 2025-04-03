@@ -80,7 +80,7 @@ export default function PersonalInfo({ onNext }) {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                placeholder="Field text goes here"
+                placeholder="Enter First Name"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               />
@@ -95,7 +95,7 @@ export default function PersonalInfo({ onNext }) {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                placeholder="Field text goes here"
+                placeholder="Enter Last Name"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               />
@@ -117,9 +117,9 @@ export default function PersonalInfo({ onNext }) {
                   onChange={handleChange}
                   className="h-4 w-4 text-blue-600 focus:ring-blue-500"
                 />
-                <span className="ml-2 text-gray-700">Male</span>
+                <span className="ml-2 text-gray-700 pl-1">Male</span>
               </label>
-              <label className="inline-flex items-center">
+              <label className="inline-flex items-center pl-2">
                 <input
                   type="radio"
                   name="gender"
@@ -128,7 +128,7 @@ export default function PersonalInfo({ onNext }) {
                   onChange={handleChange}
                   className="h-4 w-4 text-blue-600 focus:ring-blue-500"
                 />
-                <span className="ml-2 text-gray-700">Female</span>
+                <span className="ml-2 text-gray-700 pl-1">Female</span>
               </label>
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function PersonalInfo({ onNext }) {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Enter Input"
+              placeholder="Enter Email"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               required
             />
@@ -162,7 +162,7 @@ export default function PersonalInfo({ onNext }) {
                 name="idNo"
                 value={formData.idNo}
                 onChange={handleChange}
-                placeholder="Enter Input"
+                placeholder="Enter ID Number"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               />
@@ -177,7 +177,7 @@ export default function PersonalInfo({ onNext }) {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="Enter Input"
+                placeholder="Enter Phone number"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               />
@@ -195,7 +195,7 @@ export default function PersonalInfo({ onNext }) {
               name="address"
               value={formData.address}
               onChange={handleChange}
-              placeholder="Enter Input"
+              placeholder="Enter Physical Address"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               required
             />
@@ -275,7 +275,7 @@ export default function PersonalInfo({ onNext }) {
                 name="location"
                 value={formData.location}
                 onChange={handleChange}
-                placeholder="Enter Input"
+                placeholder="Enter Location"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 required
               />
