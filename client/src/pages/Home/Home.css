@@ -1,11 +1,62 @@
-.container {
+.homeContainer {
+  background-image: url('../../assets/heroImage.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
   height: 100vh;
-  background: url('../../assets/heroImage.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+/* Add a dark overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-  background-blend-mode: darken;
+}
+
+/* Ensure the navbar stays on top */
+.navbar-container {
+  position: relative;
+  z-index: 10;
+}
+
+/* Hero content styles */
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
 }
